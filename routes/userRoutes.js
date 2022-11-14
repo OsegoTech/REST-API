@@ -1,41 +1,6 @@
 const express = require('express');
+const { getAllUsers, createUSer, updateUser, deleteUser, getUser } = require('./../controllers/userController')
 
-//Router handler for users
-
-const getAllUsers = (req, res) => {
-  res.status(500).json({
-    status: "error",
-    messgage: "route not yet defined"
-  })
-}
-
-const createUSer = (req, res) => {
-  res.status(500).json({
-    status: "error",
-    messgage: "route not yet defined"
-  })
-}
-
-const getUser = (req, res) => {
-  res.status(500).json({
-    status: "error",
-    messgage: "route not yet defined"
-  })
-}
-
-const updateUser = (req, res) => {
-  res.status(500).json({
-    status: "error",
-    messgage: "route not yet defined"
-  })
-}
-
-const deleteUser = (req, res) => {
-  res.status(500).json({
-    status: "error",
-    messgage: "route not yet defined"
-  })
-}
 
 //User Routes
 const router = express.Router()
@@ -46,7 +11,8 @@ router
 
 router
   .route('/:id')
-  .get(getUser).patch(updateUser)
+  .get(getUser)
+  .patch(updateUser)
   .delete(deleteUser)
 
 

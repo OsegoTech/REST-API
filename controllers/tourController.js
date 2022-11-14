@@ -1,5 +1,4 @@
-import fs from 'fs';
-
+const fs  = require('express')
 const tours = JSON.parse(fs.readFileSync(`${__dirname}/../dev-data/data/tours-simple.json`))
 //Route Handler functions
 exports.getAllTours = (req, res) => {
@@ -77,7 +76,3 @@ exports.deleteTour = (req, res) => {
   })
 }
 
-
-module.exports = {
-
-}

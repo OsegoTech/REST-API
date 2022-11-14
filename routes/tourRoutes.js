@@ -1,4 +1,4 @@
-import tourController from './../controllers/tourController';
+const tourController = require('./../controllers/tourController')
 const express = require('express');
 const router = express.Router()
 //Tour routers
@@ -10,7 +10,7 @@ router
 router
   .route('/:id')
   .get(tourController.getTour)
-  .patch(tourController.updateTour)
+  .put(tourController.updateTour)
   .delete(tourController.deleteTour)
 
 module.exports = router;
