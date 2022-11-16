@@ -1,4 +1,4 @@
-const fs  = require('express')
+const fs  = require('fs')
 const tours = JSON.parse(fs.readFileSync(`${__dirname}/../dev-data/data/tours-simple.json`))
 //Route Handler functions
 exports.getAllTours = (req, res) => {
